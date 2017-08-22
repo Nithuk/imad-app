@@ -5,29 +5,48 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleone={
-    tilte: 'Article one|Nithya',
-    heading:'Article one',
-    date:'5th july' ,
-    content:  
-    `<p>
-    This is the content of the article one.this is the content of the article one.this is the content of the article one.this is the content of the article one.this is the content of the article one.this is the content of the article one.this is the content of the article one.
-    </p>
-                
-                
-    <p> 
-       This is the content of the article one.this is the content of the article one.this is the content of the
-       article one.this is the content of the article one.this is the content of the article one.this is the content
-       of the article one.this is the content of the article one.
-    </p>
-                
-    <p>
-        This is the content of the article one.this is the content of the article one.this is the content
-        of the article one.this is the content of the article one.this is the content of the article one
-       .this is the content of the article one.this is the content of the article one.
-    </p>`
+var articles: {
+    articleone:{
+        tilte: 'Article one|Nithya',
+        heading:'Article one',
+        date:'5th july' ,
+        content:  
+        `<p>
+        This is the content of the article one.this is the content of the article one.this is the content of the article one.this is the content of the article one.this is the content of the article one.this is the content of the article one.this is the content of the article one.
+        </p>
+                    
+                    
+        <p> 
+           This is the content of the article one.this is the content of the article one.this is the content of the
+           article one.this is the content of the article one.this is the content of the article one.this is the content
+           of the article one.this is the content of the article one.
+        </p>
+                    
+        <p>
+            This is the content of the article one.this is the content of the article one.this is the content
+            of the article one.this is the content of the article one.this is the content of the article one
+           .this is the content of the article one.this is the content of the article one.
+        </p>`
+},
+    articletwo: {
+         tilte: 'Article two|Nithya',
+        heading:'Article two',
+        date:'6th july' ,
+        content:  
+        `<p>
+        This is the content of the article two.this is the content of the article two
+        </p>`
+},
+    articlethree: {
+        tilte: 'Article three|Nithya',
+        heading:'Article three',
+        date:'7th july' ,
+        content:  
+        `<p>
+        This is the content of the article three.
+        </p>`
+}
 };
-
 function createTemplate (data){
 var title=data.title;
 var date=data.date;
